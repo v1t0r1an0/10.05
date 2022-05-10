@@ -4,16 +4,16 @@ import java.util.Date;
 
 public class Despesas {
 	
-	private Date data;
+	private String data;
 	private String descricao;
 	private Double valor;
 	private boolean edit;
 	
-	public Date getData() {
+	public String getData() {
 		return data;
 	}
 	
-	public void setData(Date data) {
+	public void setData(String data) {
 		this.data = data;
 	}
 	

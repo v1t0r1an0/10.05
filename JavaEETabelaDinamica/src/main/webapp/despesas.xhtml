@@ -32,7 +32,7 @@
 					<f:facet name = "header">Data</f:facet>
 					<!-- rendered -> se o valor for True, ele renderiza na tela, se for False não renderiza -->
 					<h:outputText value = "#{d.data}" rendered = "#{!d.edit}">
-						<f:convertDataTime pattern = "dd/MM/yyyy"/>
+						<!-- <f:convertDataTime pattern = "dd/MM/yyyy"/> -->
 					</h:outputText>
 					
 					<h:inputText value = "#{d.data}" rendered = "#{d.edit}"/>
