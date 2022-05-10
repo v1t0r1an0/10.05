@@ -5,7 +5,6 @@ import java.util.List;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.model.ListDataModel;
 import javax.inject.Named;
-
 import br.com.senai.guiVitoriano.application.model.Despesas;
 
 @SuppressWarnings("serial")
@@ -17,10 +16,11 @@ public class TabelaBean implements Serializable{
 	//Manipula a lista e fornece para a página a ListDataModel
 	private List<Despesas> despesasList = new ArrayList<>();
 	private ListDataModel<Despesas> despesas = new ListDataModel<>(despesasList);
-	//ListDataModel -> classe do java que tem métodos especiais que permitem a edição, precisa de um ArrayList
+	//ListDataModel -> Lista usada pelo JSF para construir a lista na tela
 	
 	public String inserir() {
 		
+		//Cria um novo objeto despesas e adiciona
 		Despesas d = new Despesas();
 		despesasList.add(d);
 		
@@ -37,6 +37,8 @@ public class TabelaBean implements Serializable{
 		
 	}
 	
+	//Muda a forma de manipular a tabela, ao clicar em editar ou em gravar através da variável Edit
+	
 	public String editar(Despesas despesa) {
 		
 		despesa.setEdit(true);
@@ -48,6 +50,13 @@ public class TabelaBean implements Serializable{
 		
 		despesa.setEdit(false);
 		return null;
+		
+	}
+	
+	public ListDataModel<Despesas> getDespesas(){
+		
+		//passa toda a lista para o JSF
+		return despesas;
 		
 	}
 	
