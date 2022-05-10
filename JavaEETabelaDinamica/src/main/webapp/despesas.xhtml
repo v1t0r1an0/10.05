@@ -12,7 +12,7 @@
 	</h:head>
 	
 	<h:body>
-		<h:outputStylesheet library = "css" name = "css/style.css"/>
+		<h:outputStylesheet library = "css" name = "style.css"/>
 		<h:form>
 			<h:dataTable value = "#{tabela.despesas}" var = "d" styleClass = "tabela" headerClass = "cabecalho"
 			columnClasses = "colNumero, colData, colDesc, colValor, colOp" rendered = "#{tabela.despesas.rowCount > 0}">
