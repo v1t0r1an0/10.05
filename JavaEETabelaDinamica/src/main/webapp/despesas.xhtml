@@ -12,8 +12,11 @@
 	</h:head>
 	
 	<h:body>
+		<h:outputStylesheet library = "css" name = "css/style.css"/>
 		<h:form>
-			<h:dataTable value = "#{tabela.despesas}" var = "d">
+			<h:dataTable value = "#{tabela.despesas}" var = "d" styleClass = "tabela" headerClass = "cabecalho"
+			columnClasses = "colNumero, colData, colDesc, colValor, colOp" rendered = "#{tabela.despesas.rowCount > 0}">
+			
 			<!-- Guarda as informação de tabela.despesas dentro da variável d -->
 			<!-- A partir dai qualquer menipução dessas informações podem ser feitas chamando a variável d -->
 				<f:facet name = "header">
