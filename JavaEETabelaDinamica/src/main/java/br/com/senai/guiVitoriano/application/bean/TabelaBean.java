@@ -37,4 +37,18 @@ public class TabelaBean implements Serializable{
 		
 	}
 	
+	public String editar(Despesas despesa) {
+		
+		despesa.setEdit(true);
+		return null;
+		
+	}
+	
+	public String gravar(Despesas despesa) {
+		
+		despesa.setEdit(false);
+		return null;
+		
+	}
+	
 }
