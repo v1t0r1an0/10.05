@@ -1,7 +1,5 @@
 package br.com.senai.guiVitoriano.application.model;
 
-import java.util.Date;
-
 public class Despesas {
 	
 	private String data;
