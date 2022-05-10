@@ -22,6 +22,7 @@ public class TabelaBean implements Serializable{
 		
 		//Cria um novo objeto despesas e adiciona
 		Despesas d = new Despesas();
+		d.setEdit(true);
 		despesasList.add(d);
 		
 		return null;
