@@ -32,7 +32,7 @@ public class TabelaBean implements Serializable{
 	public String excluir(Despesas despesa) {
 		
 		//Deleta um objeto da lista usando o próprio objeto como parâmetro
-		despesasList.remove(despesas);
+		despesasList.remove(despesa);
 		
 		return null;
 		
